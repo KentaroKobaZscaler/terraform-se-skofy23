@@ -12,11 +12,6 @@ Then unzip the archieve,
 $ unzip terraform_1.2.6_linux_amd64.zip
 ```
 
-Check the executable permission on the binary, if it's not executable, make it executable using the below commmand,
-
-```
-$ chmod +x terraform
-```
 
 Finally make sure that terrform is avaiable in PATH. So, let's move the binary into `/usr/local/bin` directroy,
 
