@@ -1,6 +1,4 @@
-*This lab is part of a series of guides from the [Network Automation and Tooling workshop series](https://github.com/sttrayno/Network-Automation-Tooling)*
-
-[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/sttrayno/ASA-Telemetry-Guide)
+[![Zscaler Community](https://img.shields.io/badge/zscaler-community-blue)](https://community.zscaler.com/)
 
 # Infrastructure as Code with Terraform
 
@@ -12,24 +10,22 @@ While Terraform has been increasingly used in the cloud space to provision infra
 
 Terraform is supported across Windows, Linux/Unix and MacOS. The downloads for the latest version can be found [here](https://www.terraform.io/downloads.html). Terraform is distributed as a single binary. Install Terraform by unzipping it and moving it to a directory included in your system's executable PATH. On Linux and MacOS systems you can do this through the command `$PATH`. For more information on the install I'd recommend [this handy guide](https://www.vasos-koupparis.com/terraform-getting-started-install/).
 
-If your using the sandbox Terraform wont be preinstalled. To download the Terraform executable you can run the command:
+If your using the sandbox Terraform won't be preinstalled. To download the Terraform executable you can run the command:
 
 ```
-wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/1.2.6/terraform_1.2.6_linux_amd64.zip
 ```
 
 When it downloads it will be zipped, you can unzip with the following command:
 
 ```
-unzip ./ terraform_0.12.2_linux_amd64.zip
+unzip ./ terraform_1.2.6_linux_amd64.zip
 ```
-
 
 To verify Terraform is installed use the command `terraform` in the shell. Terraform should return a list of available commands.
 
 ![](images/terraform-install.gif)
 
-To run these exercises you will need an instance of ACI. [dCloud](dcloud.cisco.com) has a couple of instances of ACI that you can reserve and use in this lab. We'll be using the ["Cisco ACI 4.1 Automation v1" demo](https://dcloud2.cisco.com/demo/aci-4-1-automation-v1). Alternatively you can also use your own instance of ACI if you have one available or use the DevNet sandbox. The only drawback of using the sandbox is you cannot get direct API access to the ACI sim and must go through an RDP client to get access, which makes getting started a bit more convoluted, but feel free to use the sandbox if you'd prefer.
 
 ## Exercise 1 - Dipping our toe in the water, creating our first resources on ACI with Terraform
 
