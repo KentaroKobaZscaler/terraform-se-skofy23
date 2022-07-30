@@ -23,7 +23,7 @@ PS D:\> Rename-Item -path .\terraform_1.2.6_windows_amd64\ .\terraform
 
 Regarding setting up an environment variable, you can add terraform path in `Path` variable as shown in below screenshot,
 
-![](/images/terraformenv.JPG)
+![EnvironmentVariables](/images/terraformenv.jpg)
 
 And, your are done. Now open up a terminal and run a command terrform and enter
 
