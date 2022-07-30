@@ -73,25 +73,23 @@ All that's left to do now we're happy with our changes that will be applied is t
 Give the execution a few moments to run, it will ask you to type "yes" to confirm the changes that are about to happen. When it's done you should get a nice confirmation at the bottom that the apply has been complete with 7 resources added, 0 changed and 0 destroyed. You can see from the output below that the resources are created sequentially, as outlined in the configuration file. This is particuarly important in ACI as certain resources will have dependencies on others.
 
 ```
-aci_tenant.terraform_tenant: Creating...
-aci_tenant.terraform_tenant: Creation complete after 2s [id=uni/tn-tenant_for_terraform]
-aci_application_profile.terraform_app: Creating...
-aci_bridge_domain.bd_for_subnet: Creating...
-aci_application_profile.terraform_app: Creation complete after 0s [id=uni/tn-tenant_for_terraform/ap-demo_ap]
-aci_application_epg.application_epg2: Creating...
-aci_application_epg.application_epg3: Creating...
-aci_application_epg.application_epg1: Creating...
-aci_bridge_domain.bd_for_subnet: Creation complete after 2s [id=uni/tn-tenant_for_terraform/BD-bd_for_subnet]
-aci_subnet.demosubnet: Creating...
-aci_subnet.demosubnet: Creation complete after 1s [id=uni/tn-tenant_for_terraform/BD-bd_for_subnet/subnet-[10.0.3.28/27]]
-aci_application_epg.application_epg2: Creation complete after 3s [id=uni/tn-tenant_for_terraform/ap-demo_ap/epg-web_epg]
-aci_application_epg.application_epg1: Creation complete after 3s [id=uni/tn-tenant_for_terraform/ap-demo_ap/epg-db_epg]
-aci_application_epg.application_epg3: Creation complete after 4s [id=uni/tn-tenant_for_terraform/ap-demo_ap/epg-log_epg]
+tls_private_key.generated: Creating...
+tls_private_key.generated: Creation complete after 0s [id=0a40867d44761d6aad9f606521513192b41d3f8c]
+local_file.private_key_pem: Creating...
+local_file.private_key_pem: Creation complete after 0s [id=89bee93fbeb39f52bea11b90247be50e2f9092e2]
+aws_key_pair.skofy23: Creating...
+aws_key_pair.skofy23: Creation complete after 1s [id=SKOFY23AWSKey]
+aws_instance.skofy23_webserver: Creating...
+aws_instance.skofy23_webserver: Still creating... [10s elapsed]
+aws_instance.skofy23_webserver: Still creating... [20s elapsed]
+aws_instance.skofy23_webserver: Still creating... [30s elapsed]
+aws_instance.skofy23_webserver: Still creating... [40s elapsed]
+aws_instance.skofy23_webserver: Creation complete after 45s [id=i-0db6148c6fa2a44b9]
 ```
 
-Let's now verify in ACI that the resources we requested have been created by following the animation below.
+Let's now verify in AWS that the resources we requested have been created by following the animation below.
 
-![](images/ACI-check.gif)
+![](images/AWS-check.gif)
 
 __Congratulations, you've just completed your first exercise on using Terraform!__
 
