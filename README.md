@@ -1,7 +1,6 @@
 # An Ultimate Terraform Hands-on Labs
 
-
-![My image](https://raw.githubusercontent.com/zscaler-bd-sa/terraform-se-skofy23/master/images/tfwordle.png)
+![tfwordle](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/images/tfwordle.png)
 
 This guide brings you tutorials to help you get hands-on experience using Terraform and AWS. Here you will find complete documentation of labs and tutorials around Terraform CLI, Configuration Language, sub-commands, providers, Registry and much more.
 
