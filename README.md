@@ -29,8 +29,7 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
   - [Linux](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/linux)
   - [Windows](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/windows)
 
-
-## From Terraform INIT To APPLY
+## From Terraform Init To Apply
 
   - [Terraform providers](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/providers/Terraform_Providers.md)
   - [Terraform resources](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/resources/Terraform_Resources.md)
@@ -79,12 +78,6 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
   - Integration of TFE with Github
   - Creating organisation
   - Configuring backends
-
-
-
-- [Intermediate Track](./intermediate/README.md) - In-Progress
-
-- [Experts Track](./experts/README.md) - Not Started
 
 
 # Terraform Associate Certification
