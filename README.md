@@ -6,7 +6,7 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
 
 #  Getting Started in 3 Simple Steps
 
-- If you need assistance before the SKO FY23 session join the [Slack](#skofy23-terraform)
+- If you need assistance before the SKO FY23 session join the following Slack Channel [#skofy23-terraform](#skofy23-terraform)
 
 # Terraform Workshop/Labs
 
