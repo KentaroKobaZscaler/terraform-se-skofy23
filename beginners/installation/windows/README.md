@@ -11,14 +11,14 @@ PS C:\Users\user>D:
 Get an exe from the below url,
 
 ```
-PS D:\> curl.exe -O https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_windows_amd64.zip
+PS D:\> curl.exe -O https://releases.hashicorp.com/terraform/1.2.6/terraform_1.2.6_windows_amd64.zip
 ```
 
 Then unzip this archieve, rename a directory to terraform and we will see a single binary file name `terraform` and add it's path into environment variables.
 
 ```
-PS D:\Terraform> Expand-Archive terraform_0.12.26_windows_amd64.zip
-PS D:\> Rename-Item -path .\terraform_0.12.26_windows_amd64\ .\terraform
+PS D:\Terraform> Expand-Archive terraform_1.2.6_windows_amd64.zip
+PS D:\> Rename-Item -path .\terraform_1.2.6_windows_amd64\ .\terraform
 ```
 
 Regarding setting up an environment variable, you can add terraform path in `Path` variable as shown in below screenshot,
@@ -60,4 +60,3 @@ PS D:\terraform> terraform -help plan
 ## Troubleshoot
 
 If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your Path variable contains the directory where Terraform was installed.
-

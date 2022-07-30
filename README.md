@@ -25,9 +25,9 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
 
 ## Installing Terraform
 
-  - [MacOS](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/os/mac/README.md)
-  - [Linux](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/os/linux)
-  - [Windows](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/os/windows)
+  - [MacOS](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/installation/mac/README.md)
+  - [Linux](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/linux)
+  - [Windows](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/windows)
 
 
 ## From Terraform INIT To APPLY
