@@ -1,83 +1,68 @@
-# Terraform Beginners Track
+# Terraform Beginners Track - Terraform and AWS
 
-## Installing Terraform
+## Prerequisites
 
-- [MacOS](https://github.com/collabnix/terraform/blob/master/beginners/os/mac/README.md)
-- [Linux](https://github.com/collabnix/terraform/tree/master/beginners/os/linux)
-- [Windows](https://github.com/collabnix/terraform/tree/master/beginners/os/windows)
-- [Raspberry Pi]()
+- Hashicorp Terraform installed.
 
-## From Terraform INIT To APPLY
+<p><a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform%2Faws-get-started&amp;wvideo=r3yytnk1pr"><img src="../images/terraform-installation-logo.png?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=1563ffe0" width="500" height="500" style="width: 520px; height: 320px;"></a></p><p><a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform%2Faws-get-started&amp;wvideo=r3yytnk1pr">Install Terraform | Terraform - HashiCorp Learn</a></p>
 
-- [Terraform providers](https://github.com/collabnix/terraform/blob/master/beginners/providers/README.md)
-- [Terraform resources](https://github.com/collabnix/terraform/blob/master/beginners/resources/README.md)
-- [Variable Resources](https://github.com/collabnix/terraform/blob/master/beginners/resources/variables/README.md)
-- [Output Resources](https://github.com/collabnix/terraform/blob/master/beginners/resources/output/README.md)
-- [Terraform CLI](https://github.com/collabnix/terraform/blob/master/beginners/CLI/README.md)
-- [Init-plan-apply !](https://github.com/collabnix/terraform/blob/master/beginners/init-plan-apply/README.md)
+- Recommended Code Editors:
+  - [Visual Studio Code](https://code.visualstudio.com/download)
+  - [Atom](https://atom.io/ )
 
-## Setting up Cloud Account
+- AWS Requirements
+  - AWS Subscription.
+  - Create AWS Access Key and Access Secret credentials
 
-#### AWS
+    <a href="https://www.youtube.com/watch?v=vucdm8BWFu0" target="_blank">
 
-- Setting up AWS account credentials
-- Launch an EC2 instance
-- Create a S3 bucket for storage
-- Launch an RDS with mysql engine
-- Deploy a Single Web Server
-- Deploy a Configurable Web Server
-- Deploy Cluster of Web Servers
-- Deploy a Load Balancer
-- Create a VPC
-- Deploy a subnet in VPC with security groups/firewall rules
-- Cleaning Up
+![My image](../images/AWS-Credentials.png)
 
-#### Azure
+</a>
 
-- [Getting started with Terraform in Azure](https://github.com/collabnix/terraform/blob/master/beginners/azure/README.md)
-- [Create a Virtual Network in Azure](https://github.com/collabnix/terraform/blob/master/beginners/azure/virtualnetwork)
-- [Create a Linux Virtual Machine in Azure](https://github.com/collabnix/terraform/tree/master/beginners/azure/linuxVM)
-- [Create a Windows-10 Virtual Machine in Azure](https://github.com/collabnix/terraform/tree/master/beginners/azure/windowsVM)
-- [Create a Storage account and Host a static website in Azure](https://github.com/collabnix/terraform/tree/master/beginners/azure/storageAccount)
-- [Create Multiple Resources in Azure using for_each](https://github.com/collabnix/terraform/tree/master/beginners/azure/multiple_resources)
-- [Create AKS Cluster with Container Monitoring](https://github.com/collabnix/terraform/tree/master/beginners/azure/aks_cluster)
+>> Note: In Permissions make sure you choose "Administrator Access" permissions when creating your user.
 
-- [How to use Modules](https://github.com/collabnix/terraform/tree/master/beginners/azure/module_example)
+# Setup AWS Credentials
 
-### GCP
+## Using environment variables
 
-- [Setting up Terraform for Google Cloud Platform](https://github.com/collabnix/terraform/blob/master/beginners/gcp/README.md)
-- Terraform vs Google Deployment Manager
-- Launch a Compute Engine Instance
-- Create a New VPC and Public Subnet
-- Auto Scale and Load Balance the Managed Instance Groups
-- Deploy a web server
-- Cleaning Up
+### macOS Users
 
-## Managing Terraform State
+```sh
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_DEFAULT_REGION=""
+```
 
-- What is Terraform State
-- Shared Storage for State Files
-- Locking State Files
-- Isolating State Files
-- File Layouts
-- Read-only States
-- Import Terraform state
+### Windows Powershell Users
 
-## Terraform Backends
+```pwsh
+$env:AWS_ACCESS_KEY_ID=""
+$env:AWS_SECRET_ACCESS_KEY=""
+$env:AWS_DEFAULT_REGION=""
+```
 
-- What are terraform backends ?
-- List of supported Remote backends
-- Using remote backends in a collaborative environments
+## AWS AMI Images Per Region
 
-## Terraform Modules
+### Choose the AMI ID According to your region
 
-- Why Terraform Modules
-- When to write Terraform Modules
+1. AMS - North Virginia - us-east-1
 
+```sh
+ami-052efd3df9dad4825 - t2.micro
+ami-070650c005cce4203 - c6g.medium
+```
 
-## Terrafrom Enterprise (TFE)
-- Additional features of TFE
-- Integration of TFE with Github
-- Creating organisation
-- Configuring backends
+2. EMEA - Frankfurt - eu-central-1
+
+```sh
+ami-065deacbcaac64cf2 - t2.micro
+ami-07f16fb14274bfc76 - c6g.medium
+```
+
+3. APJ - Singapore - ap-southeast-1
+
+```sh
+ami-02ee763250491e04a - t2.micro
+ami-06ecd61e4bded3bfe - c6g.medium
+```

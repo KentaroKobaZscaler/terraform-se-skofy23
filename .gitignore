@@ -32,3 +32,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 SKOFY23AWSKey.pem
+lab-requirements
+./lab-requirements

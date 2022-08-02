@@ -45,15 +45,15 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
 
   - Pre-Work - Setting up AWS account credentials
   - Terraform 101 Introduction
-  - Lab 01 - Launch an EC2 instance
-  - Lab 02 Deploy a Single Web Server
-  - Lab 03 - Terraform Modules
+  - [Lab 01 - Launch an EC2 instance](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/aws/lab01-terraform)
+  - [Lab 02 Deploy a Single Web Server](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/aws/lab02-terraform)
+  - [Lab 03 - Terraform Modules](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/aws/lab03-terraform)
     - Create a VPC
     - Deploy a subnet in VPC with security groups/firewall  rules
     - Deploy a Single NGINX Web Server on Docker
   - Cleaning Up
 
-# Terraform Associate Certification
+## Terraform Associate Certification
 
 - [Study Guide](https://learn.hashicorp.com/terraform/certification/terraform-associate-study-guide) <br>
 - [HashiCorp Infrastructure Automation Certification](https://www.hashicorp.com/certification/terraform-associate/)<br>

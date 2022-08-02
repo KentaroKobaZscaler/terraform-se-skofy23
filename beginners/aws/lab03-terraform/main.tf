@@ -1,3 +1,11 @@
+# 0. Random
+resource "random_string" "suffix" {
+  length  = 8
+  upper   = false
+  special = false
+}
+
+
 #Retrieve the list of AZs in the current AWS region
 data "aws_availability_zones" "available" {}
 data "aws_region" "current" {}
@@ -83,9 +91,16 @@ resource "aws_instance" "webserver" {
     depends_on = [ local_file.private_key_pem ]
 }
 
+# Output Public IP
+output "ip_addresses" {
+   value = ["${aws_instance.webserver.*.public_ip}"]
+}
+
+
+
 # Create AWS Key Pair
 resource "aws_key_pair" "skofy23" {
-    key_name = "SKOFY23AWSKey"
+    key_name = "${var.key_name}${random_string.suffix.result}"
     public_key = tls_private_key.generated.public_key_openssh
 }
 
