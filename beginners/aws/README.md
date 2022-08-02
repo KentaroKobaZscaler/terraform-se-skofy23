@@ -20,3 +20,5 @@
 ![My image](../../images/AWS-Credentials.png)
 
 </a>
+
+>> Note: In Permissions make sure you choose "Administrator Access" permissions when creating your user.
