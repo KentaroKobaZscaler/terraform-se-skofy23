@@ -28,11 +28,13 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
 
 ## Follow Along
 
-<a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started" target="_blank">
+<!-- <a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started" target="_blank">
 
 ![Terraform](./images/terraform-installation-logo.png)
 
-</a>
+</a> -->
+
+<p><a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform%2Faws-get-started&amp;wvideo=r3yytnk1pr"><img src="./images/terraform-installation-logo.png?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=1563ffe0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform%2Faws-get-started&amp;wvideo=r3yytnk1pr">Install Terraform | Terraform - HashiCorp Learn</a></p>
 
 ## From Terraform Init To Apply
 
