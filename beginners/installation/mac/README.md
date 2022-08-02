@@ -3,10 +3,11 @@
 Homebrew is a free and open-source package management system for Mac OS X. Install the Terraform formula from the terminal.
 
 ```
-$ brew install terraform
+$ brew tap hashicorp/tap
+$ brew install hashicorp/tap/terraform
 ```
 
-NOTE: Homebrew and the Terraform formula are NOT directly maintained by HashiCorp. The latest version of Terraform is always available by manual installation.
+NOTE: Homebrew and the Terraform formula are NOT directly maintained by HashiCorp. The latest version of Terraform is always available by manual installation at [Download Terraform](https://www.terraform.io/downloads)
 
 ## Verify the installation
 
@@ -20,6 +21,8 @@ $ terraform -help
 Usage: terraform [-version] [-help] <command> [args]
 ```
 
+![](../../../images/terraform-install.gif)
+
 The available commands for execution are listed below.
 The most common, useful commands are shown first, followed by
 less common or more advanced commands. If you're just getting
@@ -32,7 +35,7 @@ Add any subcommand to terraform -help to learn more about what it does and avail
 ```
 $ terraform -help plan
 ```
-
+![](../../../images/terraform-help-plan.gif)
 ## Troubleshoot
 
 If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your PATH variable contains the directory where Terraform was installed.

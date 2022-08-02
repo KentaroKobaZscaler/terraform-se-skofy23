@@ -16,9 +16,6 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
    - [The concept of Infrastructure as a Code (IaC)](getting-started/iac.md)
    - [Where terraform comes in?](getting-started/terraform.md)
    - [Use cases of Terraform](getting-started/use-cases.md)
-   - [Terraform Vs Ansible]()
-   - [Terraform Vs Chef]()
-   - [Terraform Vs Puppet]()
 
 
 # Terraform Beginners Track
@@ -29,6 +26,10 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
   - [Linux](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/linux)
   - [Windows](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/windows)
 
+[![homepage](http://commonmark.org/help/images/favicon.png)](http://commonmark.org "Redirect to homepage")
+
+
+![](../../../images/terraform-installation-logo.png)(https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
 ## From Terraform Init To Apply
 
   - [Terraform providers](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/providers/Terraform_Providers.md)
@@ -40,45 +41,17 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
 
 ## Setting up Cloud Account
 
-#### AWS
+#### Terraform and AWS
 
-  - Setting up AWS account credentials
-  - Launch an EC2 instance
-  - Create a S3 bucket for storage
-  - Deploy a Single Web Server
-  - Deploy a Configurable Web Server
-  - Create a VPC
-  - Deploy a subnet in VPC with security groups/firewall rules
+  - Pre-Work - Setting up AWS account credentials
+  - Terraform 101 Introduction
+  - Lab 01 - Launch an EC2 instance
+  - Lab 02 Deploy a Single Web Server
+  - Lab 03 - Terraform Modules
+    - Create a VPC
+    - Deploy a subnet in VPC with security groups/firewall  rules
+    - Deploy a Single NGINX Web Server on Docker
   - Cleaning Up
-
-## Managing Terraform State
-
-  - What is Terraform State
-  - Shared Storage for State Files
-  - Locking State Files
-  - Isolating State Files
-  - File Layouts
-  - Read-only States
-  - Import Terraform state
-
-## Terraform Backends
-
-  - What are terraform backends ?
-  - List of supported Remote backends
-  - Using remote backends in a collaborative environments
-
-## Terraform Modules
-
-  - Why Terraform Modules
-  - When to write Terraform Modules
-
-
-## Terraform Enterprise (TFE)
-  - Additional features of TFE
-  - Integration of TFE with Github
-  - Creating organisation
-  - Configuring backends
-
 
 # Terraform Associate Certification
 
