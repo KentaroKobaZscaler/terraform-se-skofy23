@@ -26,10 +26,14 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
   - [Linux](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/linux)
   - [Windows](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/installation/windows)
 
-[![homepage](http://commonmark.org/help/images/favicon.png)](http://commonmark.org "Redirect to homepage")
+## Follow Along
 
+<a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started" target="_blank">
 
-![](../../../images/terraform-installation-logo.png)(https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
+![Terraform](./images/terraform-installation-logo.png)
+
+</a>
+
 ## From Terraform Init To Apply
 
   - [Terraform providers](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/providers/Terraform_Providers.md)
