@@ -19,4 +19,4 @@ sudo apt-get install docker-ce -y
 sudo usermod -a -G docker $USER
 sudo systemctl enable docker
 sudo systemctl restart docker
-sudo docker run --name selab03sko23 -p 80:80 willguibr/selab03sko23:latest
+sudo docker run --name selab01sko23 -p 80:80 willguibr/selab01sko23:latest

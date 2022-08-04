@@ -17,24 +17,29 @@ terraform {
 }
 
 provider "aws" {
-    region = "us-east-1"
+    region = "ca-central-1"
 }
 
 # Create single Ubuntu EC2 Instance
 resource "aws_instance" "skofy23_webserver" {
-    ami               = "ami-052efd3df9dad4825" #Ubuntu, Canonical 22.04 LTS X86 instance_type = "t2.micro"
+    ami               = "ami-0b6937ac543fe96d7" #Ubuntu, Canonical 22.04 LTS X86 instance_type = "t2.micro"
     instance_type     = "t2.micro"
     # ami             = "ami-070650c005cce4203" #Ubuntu, Canonical 22.04 LTS ARM instance_type = "t2.micro"
     # instance_type   = "c6g.medium"
     key_name       = aws_key_pair.skofy23.key_name
+    user_data = file("scripts/init.sh")
   tags = {
     Name = "SKOFY23-Lab01"
   }
 }
 
-# Output Public IP
+# Output Public and DNS IP
 output "ip_addresses" {
-   value = ["${aws_instance.skofy23_webserver.*.public_ip}"]
+   value = formatlist("http://%s", aws_instance.skofy23_webserver.*.public_ip)
+}
+
+output "public_dns" {
+    value = formatlist("http://%s", aws_instance.skofy23_webserver.*.public_dns)
 }
 
 # Create AWS Key Pair

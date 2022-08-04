@@ -4,14 +4,14 @@ terraform {
     aws = {
       source = "hashicorp/aws"
     }
-    # http = {
-    #     source = "hashicorp/http"
-    #     version = "2.1.0"
-    # }
-    # random = {
-    #     source = "hashicorp/random"
-    #     version = "3.1.0"
-    # }
+    http = {
+        source = "hashicorp/http"
+        version = "2.1.0"
+    }
+    random = {
+        source = "hashicorp/random"
+        version = "3.1.0"
+    }
     local = {
       source  = "hashicorp/local"
       version = "2.1.0"
@@ -25,6 +25,13 @@ terraform {
 
 provider "aws" {
   region = "ca-central-1"
+}
+
+resource "random_id" "random_id" {
+    byte_length = 8
+  # length  = 8
+  # upper   = false
+  # special = false
 }
 
 # Creating a Security Group
@@ -63,7 +70,7 @@ resource "aws_instance" "skofy23_webserver" {
   instance_type          = var.instance_type
   ami                    = lookup(var.aws_amis, var.aws_region)
   count                  = var.instance_count
-  key_name               = var.key_name
+  key_name               = "${aws_key_pair.skofy23.key_name}"
   vpc_security_group_ids = ["${aws_security_group.allow_ports.id}"]
   #    subnet_id              = "${element(module.vpc.public_subnets,count.index)}"
   user_data = file("scripts/init.sh")
@@ -75,7 +82,7 @@ resource "aws_instance" "skofy23_webserver" {
 
 # Create AWS Key Pair
 resource "aws_key_pair" "skofy23" {
-  key_name   = "SKOFY23AWSKey"
+key_name = "${var.key_name}${random_id.random_id.hex}"
   public_key = tls_private_key.generated.public_key_openssh
 }
 

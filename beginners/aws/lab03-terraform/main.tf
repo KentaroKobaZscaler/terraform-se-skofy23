@@ -1,8 +1,9 @@
 # 0. Random
-resource "random_string" "suffix" {
-  length  = 8
-  upper   = false
-  special = false
+resource "random_id" "random_id" {
+    byte_length = 8
+  # length  = 8
+  # upper   = false
+  # special = false
 }
 
 
@@ -77,11 +78,11 @@ resource "aws_security_group" "allow_ports" {
    }
 }
 
-resource "aws_instance" "webserver" {
+resource "aws_instance" "skofy23_webserver" {
    instance_type          = "${var.instance_type}"
    ami                    = "${lookup(var.aws_amis, var.aws_region)}"
    count                  = "${var.instance_count}"
-   key_name               = aws_key_pair.skofy23.key_name
+   key_name               = "${aws_key_pair.skofy23.key_name}"
    vpc_security_group_ids = ["${aws_security_group.allow_ports.id}"]
    subnet_id              = "${element(module.vpc.public_subnets,count.index)}"
    user_data              = "${file("scripts/init.sh")}"
@@ -91,16 +92,9 @@ resource "aws_instance" "webserver" {
     depends_on = [ local_file.private_key_pem ]
 }
 
-# Output Public IP
-output "ip_addresses" {
-   value = ["${aws_instance.webserver.*.public_ip}"]
-}
-
-
-
 # Create AWS Key Pair
 resource "aws_key_pair" "skofy23" {
-    key_name = "${var.key_name}${random_string.suffix.result}"
+    key_name = "${var.key_name}${random_id.random_id.hex}"
     public_key = tls_private_key.generated.public_key_openssh
 }
 
