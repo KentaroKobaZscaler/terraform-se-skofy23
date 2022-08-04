@@ -11,7 +11,14 @@
   - [Atom](https://atom.io/ )
 
 - AWS Requirements
-  - AWS Subscription.
+  - AWS Subscription
+
+    <a href="https://www.loom.com/share/d7079148d10343da92b8398b077b4b5a" target="_blank">
+
+![My image](../images/AWS-Account.png)
+
+</a>
+
   - Create AWS Access Key and Access Secret credentials
 
     <a href="https://www.youtube.com/watch?v=vucdm8BWFu0" target="_blank">
