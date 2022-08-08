@@ -1,4 +1,4 @@
-# SKO FY23 - Terraform Hands-on Labs
+# SKO FY23 - Terraform 101 Hands-on Labs
 
 ![tfwordle](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/images/tfwordle.png)
 

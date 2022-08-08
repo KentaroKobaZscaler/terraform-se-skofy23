@@ -26,8 +26,8 @@ resource "aws_instance" "skofy23_webserver" {
     instance_type     = "t2.micro"
     # ami             = "ami-070650c005cce4203" #Ubuntu, Canonical 22.04 LTS ARM instance_type = "t2.micro"
     # instance_type   = "c6g.medium"
-    key_name       = aws_key_pair.skofy23.key_name
-    user_data = file("scripts/init.sh")
+    key_name          = aws_key_pair.skofy23.key_name
+    user_data         = file("scripts/init.sh")
   tags = {
     Name = "SKOFY23-Lab01"
   }
