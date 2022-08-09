@@ -34,8 +34,7 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
 
   - [Terraform providers](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/providers/Terraform_Providers.md)
   - [Terraform resources](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/resources/Terraform_Resources.md)
-  - [Variable Resources](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/resources/variables/README.md)
-  - [Output Resources](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/resources/output/README.md)
+
 
 ## Setting up Cloud Account
 
