@@ -6,7 +6,17 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
 
 #  Getting Started in 3 Simple Steps
 
-- If you need assistance before the SKO FY23 session join the following Slack Channel [#skofy23-terraform](#skofy23-terraform)
+- If you need assistance before the SKO FY23 session join the following Slack Channel [#ask-zdemo-team](https://zscaler.slack.com/archives/C02R4AHKNEQ)
+
+- [Getting Started: Why, What & How about Terraform?](getting-started/README.md)
+
+   - [The problem of provisioning everything manually](getting-started/the-problem.md)
+   - [The concept of Infrastructure as a Code (IaC)](getting-started/iac.md)
+   - [Where terraform comes in?](getting-started/terraform.md)
+   - [Use cases of Terraform](getting-started/use-cases.md)
+   - [Terraform Vs Ansible](https://www.youtube.com/watch?v=rx4Uh3jv1cA)
+   - [Terraform Vs Chef](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform)
+   - [Terraform Vs Puppet](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform)
 
 # Terraform Workshop/Labs
 
