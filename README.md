@@ -36,14 +36,12 @@ This guide brings you tutorials to help you get hands-on experience using Terraf
   - [Terraform resources](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/resources/Terraform_Resources.md)
   - [Variable Resources](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/resources/variables/README.md)
   - [Output Resources](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/resources/output/README.md)
-  - [Terraform CLI](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/CLI/README.md)
-  - [Init-plan-apply !](https://github.com/zscaler-bd-sa/terraform-se-skofy23/blob/master/beginners/init-plan-apply/README.md)
 
 ## Setting up Cloud Account
 
 #### Terraform and AWS
 
-  - Pre-Work - Setting up AWS account credentials
+  - [Pre-Work - Setting up AWS account credentials](https://www.loom.com/share/d7079148d10343da92b8398b077b4b5a)
   - Terraform 101 Introduction
   - [Lab 01 - Launch an EC2 instance](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/aws/lab01-terraform)
   - [Lab 02 Deploy a Single Web Server](https://github.com/zscaler-bd-sa/terraform-se-skofy23/tree/master/beginners/aws/lab02-terraform)
