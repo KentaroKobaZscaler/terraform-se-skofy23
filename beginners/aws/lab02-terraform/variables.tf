@@ -10,7 +10,8 @@ variable "instance_type" {
 
 variable "aws_amis" {
   default = {
-    ca-central-1 = "ami-0c802847a7dd848c0"
+ #   ca-central-1 = "ami-0c802847a7dd848c0"
+    ap-southeast-1 = "ami-0c802847a7dd848c0"
   }
 }
 
