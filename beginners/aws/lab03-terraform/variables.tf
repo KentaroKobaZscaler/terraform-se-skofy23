@@ -1,13 +1,13 @@
 # Set your AWS Region
 variable "aws_region" {
    description = "AWS Region to launch servers"
-   default = "ap-southeast-1"
+   default = "ca-central-1"
 }
 
 
 variable "aws_amis" {
    default = {
-       ca-central-1 = "ami-0c802847a7dd848c0" # Ubuntu
+       ca-central-1 = "ami-0b6937ac543fe96d7" # Ubuntu
       # ca-central-1 = "ami-098e42ae54c764c35"
    }
 }

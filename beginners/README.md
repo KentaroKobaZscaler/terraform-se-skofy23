@@ -44,9 +44,9 @@ export AWS_DEFAULT_REGION=""
 ### Windows Powershell Users
 
 ```pwsh
-$env:AWS_ACCESS_KEY_ID=""
-$env:AWS_SECRET_ACCESS_KEY=""
-$env:AWS_DEFAULT_REGION=""
+$env:AWS_ACCESS_KEY_ID="AKIAS6MYGOLHBGP3BXX2"
+$env:AWS_SECRET_ACCESS_KEY="VVdmLrO0HVwFlj8uxA1234532242r"
+$env:AWS_DEFAULT_REGION="us-east-1"
 ```
 
 ## AWS AMI Images Per Region

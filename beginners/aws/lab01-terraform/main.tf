@@ -3,7 +3,7 @@ terraform {
     required_providers {
         aws = {
             source = "hashicorp/aws"
-            version = "~> 3.37"
+            version = "4.27.0"
         }
         local = {
             source = "hashicorp/local"
@@ -17,12 +17,12 @@ terraform {
 }
 
 provider "aws" {
-    region = "ap-southeast-1"
+    region = "ca-central-1"
 }
 
 # Create single Ubuntu EC2 Instance
 resource "aws_instance" "skofy23_webserver" {
-    ami               = "ami-0c802847a7dd848c0" #Ubuntu, Canonical 22.04 LTS X86 instance_type = "t2.micro"
+    ami               = "ami-0b6937ac543fe96d7" #Ubuntu, Canonical 22.04 LTS X86 instance_type = "t2.micro"
     instance_type     = "t2.micro"
     # ami             = "ami-070650c005cce4203" #Ubuntu, Canonical 22.04 LTS ARM instance_type = "t2.micro"
     # instance_type   = "c6g.medium"
