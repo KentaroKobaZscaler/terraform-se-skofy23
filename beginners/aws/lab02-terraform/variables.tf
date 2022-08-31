@@ -1,6 +1,6 @@
 variable "aws_region" {
-#  region = "ap-southeast-1"
-  region = "ca-central-1"
+#  aws_region = "ap-southeast-1"
+  aws_region = "ca-central-1"
 }
 
 variable "instance_type" {
