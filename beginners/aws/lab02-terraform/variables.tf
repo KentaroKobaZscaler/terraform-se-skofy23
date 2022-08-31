@@ -1,5 +1,6 @@
 variable "aws_region" {
-  default = "ap-southeast-1"
+#  region = "ap-southeast-1"
+  region = "ca-central-1"
 }
 
 variable "instance_type" {
