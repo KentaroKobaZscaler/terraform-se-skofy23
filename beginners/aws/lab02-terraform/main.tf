@@ -24,8 +24,8 @@ terraform {
 }
 
 provider "aws" {
-#  region = "ap-southeast-1"
-  region = "ca-central-1"
+  region = "ap-southeast-1"
+#  region = "ca-central-1"
 }
 
 resource "random_id" "random_id" {
