@@ -20,12 +20,45 @@ provider "aws" {
     region = "eu-central-1"
 }
 
+# Creating a Security Group
+resource "aws_security_group" "allow_ports" {
+  name        = "allow_ssh_http"
+  description = "Allow inbound SSH traffic and http from any IP"
+  #    vpc_id      = "${module.vpc.vpc_id}"
+
+  #ssh access
+  ingress {
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
+    # Restrict ingress to necessary IPs/ports.
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # HTTP access
+  ingress {
+    from_port = 80
+    to_port   = 80
+    protocol  = "tcp"
+    # Restrict ingress to necessary IPs/ports.
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 # Create single Ubuntu EC2 Instance
 resource "aws_instance" "skofy23_webserver" {
     ami               = "ami-065deacbcaac64cf2" #Ubuntu, Canonical 22.04 LTS X86 instance_type = "t2.micro"
     instance_type     = "t2.micro"
     # ami             = "ami-070650c005cce4203" #Ubuntu, Canonical 22.04 LTS ARM instance_type = "t2.micro"
     # instance_type   = "c6g.medium"
+    vpc_security_group_ids = ["${aws_security_group.allow_ports.id}"]
     key_name          = aws_key_pair.skofy23.key_name
     user_data         = file("scripts/init.sh")
   tags = {
