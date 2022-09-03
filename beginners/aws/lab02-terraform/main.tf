@@ -39,7 +39,7 @@ resource "random_id" "random_id" {
 resource "aws_security_group" "allow_ports" {
   name        = "allow_ssh_http"
   description = "Allow inbound SSH traffic and http from any IP"
-      vpc_id      = "${module.vpc.vpc_id}"
+  #    vpc_id      = "${module.vpc.vpc_id}"
 
   #ssh access
   ingress {
