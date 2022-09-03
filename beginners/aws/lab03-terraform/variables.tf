@@ -30,4 +30,3 @@ variable "key_name" {
    description = "AWS Key Name"
    default     = "SKOFY23AWSKey"
 }
-
