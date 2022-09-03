@@ -40,6 +40,7 @@ resource "aws_security_group" "allow_ports" {
   name        = "allow_ssh_http"
   description = "Allow inbound SSH traffic and http from any IP"
   #    vpc_id      = "${module.vpc.vpc_id}"
+    vpc_id = vpc-037106ee015adc135
 
   #ssh access
   ingress {
