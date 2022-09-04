@@ -35,12 +35,19 @@ resource "random_id" "random_id" {
   # special = false
 }
 
+resource "aws_default_vpc" "default" {
+  tags = {
+    Name = "Default VPC"
+  }
+}
+
 # Creating a Security Group
 resource "aws_security_group" "allow_ports" {
   name        = "allow_ssh_http"
   description = "Allow inbound SSH traffic and http from any IP"
   #    vpc_id      = "${module.vpc.vpc_id}"
     vpc_id = "vpc-037106ee015adc135"
+  # vpc_id      = aws_default_vpc.default.id
 
   #ssh access
   ingress {
