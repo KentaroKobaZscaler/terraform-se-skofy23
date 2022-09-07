@@ -20,6 +20,37 @@ provider "aws" {
     region = "ap-southeast-1"
 }
 
+resource "aws_security_group" "allow_ports" {
+  name        = "allow_ssh_http"
+  description = "Allow inbound SSH traffic and http from any IP"
+  #    vpc_id      = "${module.vpc.vpc_id}"
+
+  #ssh access
+  ingress {
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
+    # Restrict ingress to necessary IPs/ports.
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # HTTP access
+  ingress {
+    from_port = 80
+    to_port   = 80
+    protocol  = "tcp"
+    # Restrict ingress to necessary IPs/ports.
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 # Create single Ubuntu EC2 Instance
 resource "aws_instance" "skofy23_webserver" {
     ami               = "ami-0c802847a7dd848c0" #Ubuntu, Canonical 22.04 LTS X86 instance_type = "t2.micro"
